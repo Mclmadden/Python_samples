@@ -7,8 +7,8 @@ def half_table(table1_name, table2_name,
     Splice together two matplotlib color tables.
     """
     n_col = 256
-    cmap1 = cm.get_cmap(table1_name, n_col)
-    cmap2 = cm.get_cmap(table2_name, n_col)
+    cmap1 = plt.get_cmap(table1_name, n_col)
+    cmap2 = plt.get_cmap(table2_name, n_col)
     pivot_int = int(round(pivot*n_col))
     if pivot_int < 0:
         pivot_int = 0
@@ -21,7 +21,7 @@ def half_table(table1_name, table2_name,
     # now hack
     newcolors[:pivot_int,:] = cmap1(np.linspace(0, 1, n_cmap1))
     newcolors[pivot_int:,:] = cmap2(np.linspace(0, 1, n_cmap2))        
-    newcmp = ListedColormap(newcolors)
+    newcmp = matplotlib.colors.ListedColormap(newcolors)
     return(newcmp)
 
 
