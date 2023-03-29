@@ -1,5 +1,9 @@
 # By Eric Koch
 
+import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
+
 def half_table(table1_name, table2_name, 
                reverse1=False, reverse2=False,
                pivot=0.5):
