@@ -26,4 +26,5 @@ def half_table(table1_name, table2_name,
 
 
 def noise_and_heat():
-    return(half_table('Greys','hot', pivot=0.2)) #mess with pivot to set the fraction where the two cmaps are stitched together
+    return(half_table('Greys','hot', pivot=0.2)) 
+#mess with pivot to set the fraction where the two cmaps are stitched together
